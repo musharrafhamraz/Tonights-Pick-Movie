@@ -228,9 +228,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter)
+Your Name - Musharraf Hamraz
 
-Project Link: [https://github.com/yourusername/sahara-movie-app](https://github.com/yourusername/sahara-movie-app)
+Project Link: [https://github.com/musharrafhamraz/sahara-movie-app](https://github.com/musharrafhamraz/sahara-movie-app)
 
 ---
 
