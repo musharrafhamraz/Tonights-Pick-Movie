@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tonight's Pick</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Manrope:wght@200..800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#fbe8d8",
+                        "on-error-container": "#7a1a10",
+                        "on-surface-variant": "#605850",
+                        "on-secondary-container": "#605850",
+                        "secondary": "#78706a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#2e1515",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#fce0e0",
+                        "surface-container": "#f2ece4",
+                        "surface-tint": "#c2652a",
+                        "primary": "#c2652a",
+                        "on-primary-fixed": "#401a08",
+                        "surface": "#faf5ee",
+                        "on-secondary-fixed-variant": "#504840",
+                        "tertiary": "#8c3c3c",
+                        "outline-variant": "#d8d0c8",
+                        "tertiary-container": "#d47070",
+                        "secondary-container": "#eae2da",
+                        "primary-fixed-dim": "#f0a878",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#e08850",
+                        "on-secondary-fixed": "#2a2420",
+                        "error": "#c0392b",
+                        "surface-container-low": "#f6f0e8",
+                        "secondary-fixed-dim": "#cec6be",
+                        "surface-dim": "#dcd6cc",
+                        "on-primary-container": "#fbe8d8",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#faf5ee",
+                        "error-container": "#fce4e0",
+                        "inverse-surface": "#3a302a",
+                        "inverse-on-surface": "#faf5ee",
+                        "background": "#faf5ee",
+                        "surface-variant": "#ece6dc",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#ece6dc",
+                        "on-surface": "#3a302a",
+                        "surface-container-highest": "#e6e0d6",
+                        "on-primary-fixed-variant": "#8a4518",
+                        "inverse-primary": "#f0a878",
+                        "tertiary-fixed-dim": "#e8a0a0",
+                        "on-tertiary-container": "#3a2020",
+                        "on-background": "#3a302a",
+                        "secondary-fixed": "#eae2da",
+                        "on-tertiary-fixed-variant": "#6e3030",
+                        "outline": "#9a9088"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["EB Garamond", "serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body min-h-screen flex flex-col md:flex-row pb-[88px] md:pb-0">
+<!-- TopAppBar (Web & Mobile Header) -->
+<header class="bg-[#faf5ee] dark:bg-stone-950 border-b border-[#d8d0c8]/60 dark:border-stone-800 shadow-[0_2px_16px_rgba(58,48,42,0.04)] flex justify-between items-center w-full px-6 h-16 sticky top-0 z-50">
+<button aria-label="Menu" class="text-[#c2652a] dark:text-[#d97706] hover:opacity-80 transition-opacity active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-['EB_Garamond'] italic text-2xl text-[#c2652a] dark:text-[#d97706] tracking-tight">Sahara</h1>
+<button aria-label="User profile" class="hover:opacity-80 transition-opacity active:scale-95 transition-transform duration-200">
+<img alt="User profile avatar" class="w-8 h-8 rounded-full object-cover border border-outline-variant" data-alt="Portrait of a young woman with warm sunlight, soft focus background, editorial styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_V3Ej_rH4JrrlZsri_WvSCHKgm5JL3VozqEkuJAybhiVZus8bNhISdj6N7yHbOKFKVpCjtLR-45o8YNDmWlLm03qf4ypy9yAkULWRfPFZIkUMbPvlZYXAFUCNhbY49pwQAYjqqxs4CAwLILwO2VO6l6etEaddNqurDs9MU-gu_7X2U6-mb8OtarS32REaQYYPTQxza78Lm8skiwsbppUY-UdM-FiPZSCUCwNG5kmCv5nIrI6gfJ4GdNdG00rQNG7GDQFt2Dii1uBI"/>
+</button>
+</header>
+<!-- Navigation Drawer (Web Only) -->
+<aside class="hidden md:flex bg-[#faf5ee] dark:bg-stone-950 h-screen w-80 rounded-r-3xl divide-y divide-[#d8d0c8]/30 shadow-2xl fixed inset-y-0 left-0 z-[60] flex-col p-4 mt-16">
+<div class="py-6 flex items-center space-x-4 px-2">
+<img alt="User profile" class="w-12 h-12 rounded-full object-cover border-2 border-primary-container" data-alt="Portrait of a young woman with warm sunlight, soft focus background, editorial styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwqqfgcoWjmCVJ62MfQzahkugBd3sZhs0714RMlogtDBDe4pDLnirUn4uwfgI9z_WA_86hl9jtDYSOp6aSRP-mXI5aMWOpZ5W4OLUcJK9BE1MihU4xJ_bnjw63RoGp4f-0Iuo1sawi02mcyjHe06Ub2lmTJ-azLLFGk8bDDsRSwEWsVjclcfwiegZhTMAUucHtmMgurr9nlV4e-QY3nM-tv6osQSIPr21CmIMSYl7HKL_DK1rmTe7ziK60Uwq0hxb0EUfQusCYH9HF"/>
+<div>
+<h2 class="font-headline text-xl text-[#c2652a] dark:text-[#d97706]">Evening, Alex</h2>
+<p class="font-body font-light text-sm text-on-surface-variant">Finding your vibe</p>
+</div>
+</div>
+<nav class="flex-1 py-4 space-y-1">
+<a class="flex items-center space-x-3 px-4 py-3 bg-[#c2652a] text-white rounded-lg mx-2 transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="quiz">quiz</span>
+<span class="font-label font-medium">Quiz</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-stone-600 dark:text-stone-400 mx-2 hover:bg-[#c2652a]/5 dark:hover:bg-stone-800 transition-colors duration-300 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="category">category</span>
+<span class="font-label font-medium">Categories</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-stone-600 dark:text-stone-400 mx-2 hover:bg-[#c2652a]/5 dark:hover:bg-stone-800 transition-colors duration-300 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-label font-medium">History</span>
+</a>
+</nav>
+<div class="py-4 space-y-1">
+<a class="flex items-center space-x-3 px-4 py-3 text-stone-600 dark:text-stone-400 mx-2 hover:bg-[#c2652a]/5 dark:hover:bg-stone-800 transition-colors duration-300 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label font-medium">Settings</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-stone-600 dark:text-stone-400 mx-2 hover:bg-[#c2652a]/5 dark:hover:bg-stone-800 transition-colors duration-300 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+<span class="font-label font-medium">Support</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 w-full max-w-5xl mx-auto md:ml-[320px] p-6 lg:p-12 md:mt-0">
+<!-- Curated Pick Section -->
+<section class="relative rounded-2xl overflow-hidden shadow-[0_4px_24px_rgba(58,48,42,0.08)] bg-surface-container-lowest border border-outline-variant/30 flex flex-col md:flex-row min-h-[618px]">
+<!-- Cinematic Image Half -->
+<div class="w-full md:w-1/2 h-64 md:h-auto relative">
+<img alt="Tonight's Pick Cinematic Imagery" class="absolute inset-0 w-full h-full object-cover object-center" data-alt="Cinematic still of a lone figure standing in a vast, warm-toned desert landscape at golden hour, dramatic shadows, highly detailed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmTsjbCNFDKIkwgTmZC0Ivz57FZ7fJGWH9xUql8Q2UsK6uXLw8Cz8roTxo4gx7A5pBAnC1ucbuRYdVY6jAklDryTukEqOIdOSQxqj-eN6qeCI1bs67Vi9UB1UXGUATvKBpCE_wz4Lsd861Kbfqs7S7XFaxL3RfiD9QUeQzvQSfISe5d5yL5ZjZmHQoZ-V8Lpb6t_W9tHZy6abpYAHAcrHDHeEVYFkNBHpPu7UjAMotxxN7uUYmhfeHv7_45otrCcttLLWVA3em2qoQ"/>
+<!-- Warm gradient overlay for blending -->
+<div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest/20 to-transparent pointer-events-none"></div>
+</div>
+<!-- Editorial Content Half -->
+<div class="w-full md:w-1/2 p-8 md:p-16 flex flex-col justify-center z-10 bg-surface-container-lowest">
+<div class="flex items-center space-x-2 mb-6">
+<span class="material-symbols-outlined text-tertiary" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label text-sm uppercase tracking-widest text-tertiary font-bold">Curated for You</span>
+</div>
+<h2 class="font-headline text-5xl md:text-6xl text-on-background leading-tight mb-4">Dune:<br/>The Golden Path</h2>
+<p class="font-body text-lg text-on-surface-variant mb-8 leading-relaxed max-w-md">
+                    An epic journey through shifting sands and political intrigue. Experience a masterpiece of visual storytelling bathed in the warmth of a dying sun. Hand-selected based on your recent cinematic mood.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label font-medium px-8 py-4 rounded-lg flex items-center space-x-2 transition-colors duration-200 shadow-[0_2px_8px_rgba(194,101,42,0.3)]">
+<span class="material-symbols-outlined" data-icon="play_arrow" data-weight="fill" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+<span>Watch Now</span>
+</button>
+<button class="bg-transparent border border-outline hover:border-primary text-on-surface hover:text-primary font-label font-medium px-6 py-4 rounded-lg transition-colors duration-200 flex items-center space-x-2">
+<span class="material-symbols-outlined" data-icon="bookmark_add">bookmark_add</span>
+<span>Save for Later</span>
+</button>
+</div>
+<div class="mt-12 pt-8 border-t border-outline-variant/50 flex space-x-8">
+<div>
+<span class="block font-label text-xs uppercase tracking-wider text-secondary mb-1">Director</span>
+<span class="font-headline text-lg text-on-background">Denis Villeneuve</span>
+</div>
+<div>
+<span class="block font-label text-xs uppercase tracking-wider text-secondary mb-1">Mood</span>
+<span class="font-headline text-lg text-on-background">Epic &amp; Atmospheric</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#faf5ee]/90 dark:bg-stone-950/90 backdrop-blur-md border-t border-[#d8d0c8]/60 dark:border-stone-800 shadow-[0_-4px_20px_rgba(58,48,42,0.03)] rounded-t-2xl">
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 px-4 py-1 hover:text-[#c2652a] dark:hover:text-[#d97706] tap-highlight-transparent active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="mood">mood</span>
+<span class="font-['Manrope'] font-medium text-[10px] uppercase tracking-widest">Mood</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#c2652a] dark:text-[#d97706] bg-[#c2652a]/10 dark:bg-[#c2652a]/20 rounded-xl px-4 py-1 tap-highlight-transparent active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="style" data-weight="fill" style="font-variation-settings: 'FILL' 1;">style</span>
+<span class="font-['Manrope'] font-medium text-[10px] uppercase tracking-widest">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 px-4 py-1 hover:text-[#c2652a] dark:hover:text-[#d97706] tap-highlight-transparent active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="bookmark">bookmark</span>
+<span class="font-['Manrope'] font-medium text-[10px] uppercase tracking-widest">Watchlist</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 px-4 py-1 hover:text-[#c2652a] dark:hover:text-[#d97706] tap-highlight-transparent active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-['Manrope'] font-medium text-[10px] uppercase tracking-widest">Profile</span>
+</a>
+</nav>
+</body></html>

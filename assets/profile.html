@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profile - Sahara</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#3a302a",
+                        "on-tertiary-fixed": "#2e1515",
+                        "inverse-on-surface": "#faf5ee",
+                        "tertiary-fixed-dim": "#e8a0a0",
+                        "secondary-fixed-dim": "#cec6be",
+                        "primary-fixed-dim": "#f0a878",
+                        "on-surface-variant": "#605850",
+                        "tertiary": "#8c3c3c",
+                        "on-error-container": "#7a1a10",
+                        "tertiary-fixed": "#fce0e0",
+                        "on-tertiary-container": "#3a2020",
+                        "primary": "#c2652a",
+                        "inverse-surface": "#3a302a",
+                        "primary-container": "#e08850",
+                        "error": "#c0392b",
+                        "tertiary-container": "#d47070",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#c2652a",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#faf5ee",
+                        "secondary-container": "#eae2da",
+                        "on-tertiary-fixed-variant": "#6e3030",
+                        "primary-fixed": "#fbe8d8",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e6e0d6",
+                        "surface-dim": "#dcd6cc",
+                        "secondary-fixed": "#eae2da",
+                        "error-container": "#fce4e0",
+                        "background": "#faf5ee",
+                        "outline": "#9a9088",
+                        "on-secondary-fixed": "#2a2420",
+                        "on-primary-container": "#fbe8d8",
+                        "secondary": "#78706a",
+                        "surface": "#faf5ee",
+                        "on-surface": "#3a302a",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#401a08",
+                        "surface-variant": "#ece6dc",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#d8d0c8",
+                        "on-primary-fixed-variant": "#8a4518",
+                        "on-secondary-fixed-variant": "#504840",
+                        "inverse-primary": "#f0a878",
+                        "surface-container-high": "#ece6dc",
+                        "on-secondary-container": "#605850",
+                        "surface-container": "#f2ece4",
+                        "surface-container-low": "#f6f0e8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {},
+                    "fontFamily": {
+                        "headline": ["EB Garamond", "serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body pb-24 md:pb-0 pt-16 md:pt-20">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 h-16 bg-[#faf5ee] dark:bg-stone-950 border-b border-[#d8d0c8]/60 shadow-[0_2px_16px_rgba(58,48,42,0.04)] md:h-20">
+<div class="flex items-center gap-4">
+<button class="text-stone-500 dark:text-stone-400 hover:opacity-80 transition-opacity active:scale-95 duration-200 p-2 md:hidden">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_back</span>
+</button>
+<h1 class="font-headline text-2xl font-medium tracking-tight text-[#c2652a] dark:text-orange-400">Profile</h1>
+</div>
+<!-- Desktop Nav Items -->
+<nav class="hidden md:flex items-center gap-8 px-6">
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 hover:opacity-80 transition-opacity active:scale-95 duration-200 font-label text-sm" href="#">
+<span>Mood</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 hover:opacity-80 transition-opacity active:scale-95 duration-200 font-label text-sm" href="#">
+<span>Discover</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 hover:opacity-80 transition-opacity active:scale-95 duration-200 font-label text-sm" href="#">
+<span>Library</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#c2652a] dark:text-orange-400 hover:opacity-80 transition-opacity active:scale-95 duration-200 font-label text-sm font-semibold border-b-2 border-primary pb-1" href="#">
+<span>Profile</span>
+</a>
+</nav>
+<button class="text-stone-500 dark:text-stone-400 hover:opacity-80 transition-opacity active:scale-95 duration-200 p-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">settings</span>
+</button>
+</header>
+<main class="max-w-3xl mx-auto px-6 py-8">
+<!-- User Header Section -->
+<section class="flex flex-col items-center text-center mb-12">
+<div class="relative w-32 h-32 mb-6">
+<img alt="Alex Thorne" class="w-full h-full object-cover rounded-full border-4 border-surface-container-low shadow-md" data-alt="Close-up portrait of a thoughtful young man with short dark hair in warm, golden hour lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeFJ3ijr7HLoP2UueuL0fOc1qiVzu4bFE51d_DMi-wC_cSnQdef1RclLAbjmankvct5oh-XFQY1NBOUmPyFzagZuAac6r9yTWXaxAnjLXulWJzpXXpGp5tvDouXiQHbsVs7Gqv5RyJmTIE5SFEnJ7z4hfjdTxfTv4hfB9-gB61lRz7hJQuujag5tReQjImK2bKvTc1P3SRaw8u_4W8n5zVnzNnz2CW1kkqz1UGZQmVKCVBiFuWxVPJtyfsoOVRhBCIhuHKLyctzhN3"/>
+<button aria-label="Edit Profile Picture" class="absolute bottom-0 right-0 bg-primary text-on-primary p-2 rounded-full shadow-lg hover:bg-primary-container hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">edit</span>
+</button>
+</div>
+<h2 class="font-headline text-4xl font-semibold text-on-background mb-2">Alex Thorne</h2>
+<p class="text-on-surface-variant text-lg">Curating your cinematic journey</p>
+</section>
+<!-- Engagement Stats Bento -->
+<section class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
+<div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/30 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-primary mb-2 text-3xl" style="font-variation-settings: 'FILL' 0;">movie</span>
+<span class="font-headline text-3xl font-semibold text-on-background">124</span>
+<span class="text-sm text-on-surface-variant font-medium mt-1 uppercase tracking-wider">Movies Watched</span>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/30 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-primary mb-2 text-3xl" style="font-variation-settings: 'FILL' 0;">bookmark</span>
+<span class="font-headline text-3xl font-semibold text-on-background">42</span>
+<span class="text-sm text-on-surface-variant font-medium mt-1 uppercase tracking-wider">Saved</span>
+</div>
+<div class="bg-primary-fixed p-6 rounded-xl border border-primary/20 flex flex-col items-center justify-center text-center col-span-2 md:col-span-1 shadow-sm">
+<span class="material-symbols-outlined text-primary mb-2 text-3xl" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="font-headline text-3xl font-semibold text-on-primary-fixed">5 Days</span>
+<span class="text-sm text-on-primary-fixed-variant font-medium mt-1 uppercase tracking-wider">Mood Streak</span>
+</div>
+</section>
+<!-- Mood History Grid -->
+<section class="mb-12">
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-headline text-2xl font-semibold text-on-background">Your Mood History</h3>
+<button class="text-sm font-medium text-primary hover:underline underline-offset-4">View All</button>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+<div class="bg-surface-container p-4 rounded-lg flex flex-col items-center text-center border border-outline-variant/20 hover:border-primary/40 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-tertiary mb-2" style="font-variation-settings: 'FILL' 0;">auto_awesome</span>
+<span class="font-medium text-on-background">Inspiring</span>
+<span class="text-xs text-on-surface-variant mt-1">Today</span>
+</div>
+<div class="bg-surface-container p-4 rounded-lg flex flex-col items-center text-center border border-outline-variant/20 hover:border-primary/40 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-secondary mb-2" style="font-variation-settings: 'FILL' 0;">storm</span>
+<span class="font-medium text-on-background">Thrilling</span>
+<span class="text-xs text-on-surface-variant mt-1">Yesterday</span>
+</div>
+<div class="bg-surface-container p-4 rounded-lg flex flex-col items-center text-center border border-outline-variant/20 hover:border-primary/40 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-primary mb-2" style="font-variation-settings: 'FILL' 0;">self_improvement</span>
+<span class="font-medium text-on-background">Relaxing</span>
+<span class="text-xs text-on-surface-variant mt-1">Mon</span>
+</div>
+<div class="bg-surface-container p-4 rounded-lg flex flex-col items-center text-center border border-outline-variant/20 hover:border-primary/40 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-tertiary mb-2" style="font-variation-settings: 'FILL' 0;">sentiment_very_satisfied</span>
+<span class="font-medium text-on-background">Joyful</span>
+<span class="text-xs text-on-surface-variant mt-1">Sun</span>
+</div>
+</div>
+</section>
+<!-- Preferences Section -->
+<section class="mb-12">
+<h3 class="font-headline text-2xl font-semibold text-on-background mb-6">Preferences</h3>
+<div class="bg-surface-container-low rounded-xl border border-outline-variant/40 divide-y divide-outline-variant/30">
+<div class="flex items-center justify-between p-5 hover:bg-surface-container/50 transition-colors cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">dark_mode</span>
+</div>
+<span class="font-medium text-on-background text-lg">Dark Mode</span>
+</div>
+<!-- Toggle Switch Placeholder -->
+<div class="w-12 h-6 bg-surface-container-highest rounded-full relative shadow-inner cursor-pointer">
+<div class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full shadow"></div>
+</div>
+</div>
+<div class="flex items-center justify-between p-5 hover:bg-surface-container/50 transition-colors cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">notifications_active</span>
+</div>
+<span class="font-medium text-on-background text-lg">Notifications</span>
+</div>
+<!-- Toggle Switch Active Placeholder -->
+<div class="w-12 h-6 bg-primary rounded-full relative shadow-inner cursor-pointer">
+<div class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full shadow"></div>
+</div>
+</div>
+<div class="flex items-center justify-between p-5 hover:bg-surface-container/50 transition-colors cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">subscriptions</span>
+</div>
+<div class="flex flex-col">
+<span class="font-medium text-on-background text-lg">Streaming Services</span>
+<span class="text-sm text-on-surface-variant">Manage connected platforms</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline" style="font-variation-settings: 'FILL' 0;">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Account Section -->
+<section class="mb-8">
+<h3 class="font-headline text-2xl font-semibold text-on-background mb-6">Account</h3>
+<div class="bg-surface-container-low rounded-xl border border-outline-variant/40 divide-y divide-outline-variant/30">
+<a class="flex items-center justify-between p-5 hover:bg-surface-container/50 transition-colors block" href="#">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant" style="font-variation-settings: 'FILL' 0;">person</span>
+<span class="font-medium text-on-background text-lg">Edit Profile</span>
+</div>
+<span class="material-symbols-outlined text-outline" style="font-variation-settings: 'FILL' 0;">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-5 hover:bg-surface-container/50 transition-colors block" href="#">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant" style="font-variation-settings: 'FILL' 0;">shield_person</span>
+<span class="font-medium text-on-background text-lg">Privacy &amp; Security</span>
+</div>
+<span class="material-symbols-outlined text-outline" style="font-variation-settings: 'FILL' 0;">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-5 hover:bg-error-container/20 transition-colors block group" href="#">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-error" style="font-variation-settings: 'FILL' 0;">logout</span>
+<span class="font-medium text-error text-lg">Sign Out</span>
+</div>
+</a>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-[#faf5ee] dark:bg-stone-950 border-t border-[#d8d0c8]/60 shadow-[0_-4px_20px_rgba(58,48,42,0.03)] rounded-t-xl md:hidden">
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 hover:text-[#c2652a] dark:hover:text-orange-300 active:translate-y-[-2px] transition-all group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:text-primary transition-colors" style="font-variation-settings: 'FILL' 0;">mood</span>
+<span class="font-sans text-[11px] font-semibold uppercase tracking-wider">Mood</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 hover:text-[#c2652a] dark:hover:text-orange-300 active:translate-y-[-2px] transition-all group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:text-primary transition-colors" style="font-variation-settings: 'FILL' 0;">explore</span>
+<span class="font-sans text-[11px] font-semibold uppercase tracking-wider">Discover</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 hover:text-[#c2652a] dark:hover:text-orange-300 active:translate-y-[-2px] transition-all group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:text-primary transition-colors" style="font-variation-settings: 'FILL' 0;">subscriptions</span>
+<span class="font-sans text-[11px] font-semibold uppercase tracking-wider">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#c2652a] dark:text-orange-400 scale-110 transition-transform hover:text-[#c2652a] dark:hover:text-orange-300 active:translate-y-[-2px]" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-sans text-[11px] font-semibold uppercase tracking-wider">Profile</span>
+</a>
+</nav>
+</body></html>

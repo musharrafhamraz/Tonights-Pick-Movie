@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Swipe Discovery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#fbe8d8",
+                        "on-error-container": "#7a1a10",
+                        "on-surface-variant": "#605850",
+                        "on-secondary-container": "#605850",
+                        "secondary": "#78706a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#2e1515",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#fce0e0",
+                        "surface-container": "#f2ece4",
+                        "surface-tint": "#c2652a",
+                        "primary": "#c2652a",
+                        "on-primary-fixed": "#401a08",
+                        "surface": "#faf5ee",
+                        "on-secondary-fixed-variant": "#504840",
+                        "tertiary": "#8c3c3c",
+                        "outline-variant": "#d8d0c8",
+                        "tertiary-container": "#d47070",
+                        "secondary-container": "#eae2da",
+                        "primary-fixed-dim": "#f0a878",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#e08850",
+                        "on-secondary-fixed": "#2a2420",
+                        "error": "#c0392b",
+                        "surface-container-low": "#f6f0e8",
+                        "secondary-fixed-dim": "#cec6be",
+                        "surface-dim": "#dcd6cc",
+                        "on-primary-container": "#fbe8d8",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#faf5ee",
+                        "error-container": "#fce4e0",
+                        "inverse-surface": "#3a302a",
+                        "inverse-on-surface": "#faf5ee",
+                        "background": "#faf5ee",
+                        "surface-variant": "#ece6dc",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#ece6dc",
+                        "on-surface": "#3a302a",
+                        "surface-container-highest": "#e6e0d6",
+                        "on-primary-fixed-variant": "#8a4518",
+                        "inverse-primary": "#f0a878",
+                        "tertiary-fixed-dim": "#e8a0a0",
+                        "on-tertiary-container": "#3a2020",
+                        "on-background": "#3a302a",
+                        "secondary-fixed": "#eae2da",
+                        "on-tertiary-fixed-variant": "#6e3030",
+                        "outline": "#9a9088"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {},
+                    "fontFamily": {
+                        "headline": ["EB Garamond", "serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-[#faf5ee] dark:bg-stone-950 text-[#c2652a] dark:text-[#d97706] font-['EB_Garamond'] serif text-2xl tracking-tight docked full-width top-0 border-b border-[#d8d0c8]/60 dark:border-stone-800 shadow-[0_2px_16px_rgba(58,48,42,0.04)] flex justify-between items-center w-full px-6 h-16 shrink-0 sticky z-40">
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-variant transition-colors text-[#c2652a] dark:text-[#d97706] active:scale-95 duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<span class="font-['EB_Garamond'] italic text-2xl text-[#c2652a] dark:text-[#d97706] font-bold">Sahara</span>
+</div>
+<button class="w-10 h-10 rounded-full bg-secondary-container overflow-hidden hover:opacity-80 transition-opacity active:scale-95 duration-200 flex-shrink-0">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="Close up portrait of a young woman with natural makeup, warm sunset lighting, subtle earthy tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7GZw-bASJoQom8zjKedNlDr1h6n2OI-DrcezUK8bYr_wCDXZr74gXrKQ-zn-7YNxRxeBuN4VqmgU2seOtwrrjiHZYgCh-TFlRmzaN_m27_u1vgYdYMAFIwnCwMKUx5FrMiC9MwDJRmdhUpZBqI07SQJ5MpYsujDCrDkWmUQBNOrnQlzo3ftqm0Jj5Sf9zEHlPApapd-rWsAHREzkweiTw-1UjG8jWySt5lsAtDmZWOel9DW6efaF_HyF-mGgiUAmbtWcr3DUYkBGk"/>
+</button>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow flex flex-col md:flex-row relative z-10 w-full max-w-7xl mx-auto">
+<!-- NavigationDrawer (Web) -->
+<aside class="hidden md:flex flex-col bg-[#faf5ee] dark:bg-stone-950 h-full w-80 rounded-r-3xl divide-y divide-[#d8d0c8]/30 shadow-2xl fixed inset-y-0 left-0 z-[60] p-4 font-['Manrope'] font-light shrink-0 sticky top-16" style="height: calc(100vh - 4rem);">
+<div class="py-6 px-4 flex flex-col items-start gap-3">
+<div class="w-16 h-16 rounded-full bg-secondary-container overflow-hidden">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="Close up portrait of a young woman with natural makeup, warm sunset lighting, subtle earthy tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuI0lntZ-6DWqaLeq6k97nu-lc6eD0rDSJelZK-KOmotL0fRulvVwKqP2CyO0_XuugDqDfZFrpFqeAusRFtwTzk_D_NyUfbjxAGHTjZ2uZMSgUygSaZmWtZR6hRH9_Rm-c_MBhjYXLdp4_VhOp9gg9mqLz2GLUFwExehD0J6VzxeinYu8t6iH6A0eXhllxd3RbMtSaw7I7i4jsANkjnCSdSsDCgA_AjtimFlDOTi1pm_UpJFEZaQzgChM7Fnk0F6zgemF8pGfCSf92"/>
+</div>
+<div>
+<h2 class="text-on-surface font-body font-medium text-lg">Evening, Alex</h2>
+<p class="text-on-surface-variant text-sm">Finding your vibe</p>
+</div>
+</div>
+<nav class="flex-grow py-6 flex flex-col gap-2">
+<a class="flex items-center gap-4 px-4 py-3 text-stone-600 dark:text-stone-400 mx-2 hover:bg-[#c2652a]/5 dark:hover:bg-stone-800 transition-colors duration-300 rounded-lg" href="#">
+<span class="material-symbols-outlined">quiz</span>
+<span>Quiz</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-stone-600 dark:text-stone-400 mx-2 hover:bg-[#c2652a]/5 dark:hover:bg-stone-800 transition-colors duration-300 rounded-lg" href="#">
+<span class="material-symbols-outlined">category</span>
+<span>Categories</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-stone-600 dark:text-stone-400 mx-2 hover:bg-[#c2652a]/5 dark:hover:bg-stone-800 transition-colors duration-300 rounded-lg" href="#">
+<span class="material-symbols-outlined">history</span>
+<span>History</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-stone-600 dark:text-stone-400 mx-2 hover:bg-[#c2652a]/5 dark:hover:bg-stone-800 transition-colors duration-300 rounded-lg" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-stone-600 dark:text-stone-400 mx-2 hover:bg-[#c2652a]/5 dark:hover:bg-stone-800 transition-colors duration-300 rounded-lg" href="#">
+<span class="material-symbols-outlined">help_outline</span>
+<span>Support</span>
+</a>
+</nav>
+</aside>
+<!-- Swipe Content -->
+<section class="flex-grow flex flex-col items-center justify-center p-6 pb-32 md:pb-6 overflow-hidden relative">
+<div class="text-center mb-8 hidden md:block">
+<h1 class="font-headline text-4xl text-on-surface mb-2">Discover</h1>
+<p class="font-body text-on-surface-variant font-light">Swipe to curate your watchlist.</p>
+</div>
+<!-- Card Stack Container -->
+<div class="relative w-full max-w-[340px] md:max-w-[420px] aspect-[2/3] md:aspect-[3/4] perspective-1000">
+<!-- Background Card (Next in stack) -->
+<div class="absolute inset-0 bg-surface-container rounded-2xl shadow-sm transform scale-95 translate-y-4 opacity-50 overflow-hidden border border-outline-variant/30 flex flex-col justify-end p-6">
+<div class="w-full h-full absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
+<img alt="Next item" class="absolute inset-0 w-full h-full object-cover z-0 grayscale" data-alt="A vintage cinematic movie poster style image, sepia toned, grainy texture, indistinct figures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-lBUbSYGP-s1zhdMYfJLimjYWSk5ve8ygG_O3jJxwpxcXxsSV8sz73Mw9XSix49UxN9Zll-PlexH6b7GHdRR0bqKh74yyHEtmJPP4BbI6ljg-UNAi6LkOlxyjplbDptN1M-FQlv8XEY9Gd8run3zACef26MmlaHIqBYehLAI0-S-5a5cJhGF8gtfNxIWhmCN0a8cuUFkeq-tEMl2cSK3u3GQVM-VuLysIKfT03svrDyf687iDBbsFfA383vteji3_tG3DIWlACebj"/>
+</div>
+<!-- Foreground Active Card -->
+<div class="absolute inset-0 bg-surface-container-low rounded-3xl shadow-[0_8px_30px_rgba(58,48,42,0.12)] overflow-hidden border border-outline-variant/50 flex flex-col justify-end transform transition-transform duration-300 hover:scale-[1.02] cursor-grab active:cursor-grabbing z-20 group">
+<!-- Poster Image -->
+<img alt="Dune landscape" class="absolute inset-0 w-full h-full object-cover z-0" data-alt="Cinematic shot of a vast desert landscape with rolling sand dunes at golden hour, warm orange light, deep shadows, cinematic scale." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW2SNpYLkdVgdloAGIAYQjDi5ndVaOSbeeieb8dHAya6uZbGsJ4omHCnNEIlGwqkx1HcSY8lpir_Mxzvoxq-t08zfkD2Q6Cn2l5djVPGk4eQoxzmBOuS-Ntc_uAgUDo18Mc5PctOuOTKBNe2JhAczw_vcxNP2MIwOmCYUdqD3J5JnlASEGeM2bLQ7pP9PgLeIv05oZvVMaSf-vqowcjcoVzRZM1RQKSqle-a1zg8D7xy1DY3tZoze3EL16HX7Eit6ITBugch375osw"/>
+<!-- Gradient Overlay -->
+<div class="w-full h-full absolute inset-0 bg-gradient-to-t from-stone-900/90 via-stone-900/40 to-transparent z-10 pointer-events-none transition-opacity duration-300 group-hover:opacity-90"></div>
+<!-- Card Content (Text) -->
+<div class="relative z-20 p-8 pt-20 flex flex-col gap-2">
+<div class="flex items-center gap-3 mb-1">
+<span class="bg-primary/90 text-on-primary text-xs font-body font-bold px-2 py-1 rounded-md tracking-wide">MATCH 94%</span>
+<span class="text-surface-container-low font-body text-sm font-medium tracking-wider">2021</span>
+</div>
+<h2 class="font-headline text-4xl text-surface-container-lowest leading-tight">Dune: Part One</h2>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-surface-tint text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-surface-container-low font-body font-medium text-sm">8.0</span>
+<span class="text-outline text-xs mx-1">•</span>
+<span class="text-outline text-sm font-body font-light">Sci-Fi, Adventure</span>
+</div>
+<p class="text-surface-variant font-body font-light text-sm line-clamp-2 mt-3 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-0 group-hover:h-auto">A noble family becomes embroiled in a war for control over the galaxy's most valuable asset while its heir becomes troubled by visions of a dark future.</p>
+</div>
+</div>
+<!-- Overlay Hint Actions (Visible on drag simulation) -->
+<div class="absolute left-6 top-1/2 -translate-y-1/2 z-30 opacity-0 transform -translate-x-4 pointer-events-none">
+<div class="w-16 h-16 rounded-full border-4 border-error text-error flex items-center justify-center transform -rotate-12 bg-error/10 backdrop-blur-sm">
+<span class="material-symbols-outlined text-4xl">close</span>
+</div>
+</div>
+<div class="absolute right-6 top-1/2 -translate-y-1/2 z-30 opacity-0 transform translate-x-4 pointer-events-none">
+<div class="w-16 h-16 rounded-full border-4 border-primary text-primary flex items-center justify-center transform rotate-12 bg-primary/10 backdrop-blur-sm">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center justify-center gap-8 mt-12 z-20">
+<button class="w-16 h-16 rounded-full bg-surface-container-high border border-outline-variant/50 shadow-sm flex items-center justify-center text-on-surface-variant hover:bg-surface-variant hover:text-error transition-all duration-300 active:scale-90 group focus:outline-none focus:ring-2 focus:ring-error/50">
+<span class="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">close</span>
+</button>
+<button class="w-14 h-14 rounded-full bg-surface-container-highest border border-outline-variant/30 flex items-center justify-center text-on-surface-variant hover:bg-surface-variant transition-all duration-300 active:scale-90">
+<span class="material-symbols-outlined text-xl">undo</span>
+</button>
+<button class="w-16 h-16 rounded-full bg-surface-container-high border border-outline-variant/50 shadow-sm flex items-center justify-center text-on-surface-variant hover:bg-primary-fixed hover:text-primary transition-all duration-300 active:scale-90 group focus:outline-none focus:ring-2 focus:ring-primary/50">
+<span class="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden bg-[#faf5ee]/90 dark:bg-stone-950/90 backdrop-blur-md text-[#c2652a] dark:text-[#d97706] font-['Manrope'] font-medium text-[10px] uppercase tracking-widest docked full-width bottom-0 rounded-t-2xl border-t border-[#d8d0c8]/60 dark:border-stone-800 shadow-[0_-4px_20px_rgba(58,48,42,0.03)] fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 shrink-0">
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 px-4 py-1 hover:text-[#c2652a] dark:hover:text-[#d97706] tap-highlight-transparent active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined mb-1">mood</span>
+<span>Mood</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#c2652a] dark:text-[#d97706] bg-[#c2652a]/10 dark:bg-[#c2652a]/20 rounded-xl px-4 py-1 hover:text-[#c2652a] dark:hover:text-[#d97706] tap-highlight-transparent active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">style</span>
+<span>Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 px-4 py-1 hover:text-[#c2652a] dark:hover:text-[#d97706] tap-highlight-transparent active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined mb-1">bookmark</span>
+<span>Watchlist</span>
+</a>
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 px-4 py-1 hover:text-[#c2652a] dark:hover:text-[#d97706] tap-highlight-transparent active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span>Profile</span>
+</a>
+</nav>
+</body></html>
